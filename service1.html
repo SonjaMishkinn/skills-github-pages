@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Стрижки</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: { primary: "#333333", secondary: "#666666" },
+            borderRadius: {
+              none: "0px",
+              sm: "4px",
+              DEFAULT: "8px",
+              md: "12px",
+              lg: "16px",
+              xl: "20px",
+              "2xl": "24px",
+              "3xl": "32px",
+              full: "9999px",
+              button: "8px",
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
+    />
+  </head>
+
+<body class="min-h-screen flex flex-col">
+    <!-- Header -->
+    <header class="bg-primary text-white py-4">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <a href="index.html" class="text-xl font-bold">Брюнетка</a>
+            <nav class="hidden md:flex space-x-8">
+                <a href="index.html#about" class="hover:text-gray-300 transition-colors">О нас</a>
+                <a href="index.html#services" class="hover:text-gray-300 transition-colors">Услуги</a>
+                <a href="index.html#offers" class="hover:text-gray-300 transition-colors">Акции</a>
+            </nav>
+            <div class="md:hidden w-8 h-8 flex items-center justify-center">
+                <i class="ri-menu-line ri-lg"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow">
+        <div class="container mx-auto px-4 py-8">
+            <!-- Back Button -->
+            <a href="index.html" class="inline-flex items-center border border-gray-300 px-4 py-2 mb-8 hover:bg-gray-100 transition-colors">
+                <i class="ri-arrow-left-s-line ri-lg mr-2"></i>
+                <span>В начало</span>
+            </a>
+
+            <!-- Haircut Service Section -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-6">
+                <!-- Left Column - Images -->
+                <div class="space-y-4 relative">
+                    <div class="haircut-image overflow-hidden">
+                        <img src="images\photo_2025-05-13_15-08-32.jpg">
+                    </div>
+                    
+                </div>
+
+                <!-- Right Column - Service Info -->
+                <div class="flex flex-col justify-center">
+                    <h1 class="text-3xl font-bold mb-6">Стрижки любой сложности</h1>
+                    
+                    <div class="mb-8">
+                        <p class="text-gray-700 mb-4">Новая стрижка - новый образ! Подчеркнём вашу индивидуальность и стиль. Запишитесь и обновите свой лук идеальной стрижкой!</p>
+                    </div>
+                    
+                    <div class="mb-8">
+                        <h2 class="text-xl font-semibold mb-4">Стрижка + сушка</h2>
+                        <ul class="space-y-3">
+                            <li class="flex items-center">
+                                <span class="mr-2">•</span>
+                                <span>Короткие - <span class="font-bold">300 руб.</span></span>
+                            </li>
+                            <li class="flex items-center">
+                                <span class="mr-2">•</span>
+                                <span>Средние - <span class="font-bold">400-500 руб.</span></span>
+                            </li>
+                            <li class="flex items-center">
+                                <span class="mr-2">•</span>
+                                <span>Длинные - <span class="font-bold">450-600 руб.</span></span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <a href="appointment.html">
+                      <button class="bg-primary text-white px-6 py-3 !rounded-button whitespace-nowrap w-max hover:bg-gray-800 transition-colors">
+                        Записаться
+                    </button>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Divider -->
+            <div class="border-t border-gray-200 my-16"></div>
+
+            
+        </div>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-black text-white relative">
+        <div class="container mx-auto px-8 py-8">
+          <div class="flex flex-col">
+            <a href="index.html">
+                <h3 class="text-2xl font-['Pacifico'] mb-6">Брюнетка</h3>
+            </a>
+            <div class="flex flex-col space-y-2 mb-6">
+              <a href="index.html#about" class="text-gray-300 hover:text-white transition-colors"
+                >О нас</a
+              >
+              <a href="index.html#services" class="text-gray-300 hover:text-white transition-colors"
+                >Услуги</a
+              >
+              <a href="index.html#offers" class="text-gray-300 hover:text-white transition-colors"
+                >Акции</a
+              >
+            </div>
+            <div class="flex flex-col space-y-2 mb-6">
+              <p class="text-gray-300">Пн-Пт: 08:00-23:00</p>
+              <p class="text-gray-300">Сб-Вс: 09:00-17:00</p>
+              <p class="text-gray-300">г. Вологда, ул. Ленина 25</p>
+            </div>
+            <div class="flex space-x-4">
+              <a
+                href="https://vk.com/brunetka1010"
+                target="_blank"
+                class="text-white hover:text-gray-300 transition-colors"
+              >
+                <div class="w-8 h-8 flex items-center justify-center">
+                  <i class="ri-vk-fill ri-lg"></i>
+                </div>
+              </a>
+              <a
+                href="https://www.instagram.com/brunetka.vologda?igsh=MXR5YjQ2MzFnNjZjMw=="
+                target="_blank"
+                class="text-white hover:text-gray-300 transition-colors"
+              >
+                <div class="w-8 h-8 flex items-center justify-center">
+                  <i class="ri-instagram-fill ri-lg"></i>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="absolute right-0 bottom-0">
+            <img
+              src="images\Rectangle 16_6.jpg"
+              alt="Footer image"
+              class="h-[300px] object-cover object-top"
+            />
+          </div>
+        </div>
+      </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile menu toggle functionality could be added here
+        });
+    </script>
+</body>
+</html>

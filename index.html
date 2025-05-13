@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Студия красоты Брюнетка</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: { primary: "#333333", secondary: "#666666" },
+            borderRadius: {
+              none: "0px",
+              sm: "4px",
+              DEFAULT: "8px",
+              md: "12px",
+              lg: "16px",
+              xl: "20px",
+              "2xl": "24px",
+              "3xl": "32px",
+              full: "9999px",
+              button: "8px",
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
+    />
+    <style>
+      :where([class^="ri-"])::before {
+        content: "\f3c2";
+      }
+      body {
+        font-family: "Inter", sans-serif;
+      }
+      .hero-bg {
+        background-position: right center;
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+      .service-card:hover .arrow-icon {
+        transform: translateX(5px);
+      }
+      .arrow-icon {
+        transition: transform 0.3s ease;
+      }
+    </style>
+  </head>
+  <body class="bg-white">
+    <!-- Header Navigation -->
+    <header class="w-full py-6 px-8 md:px-16 flex items-center justify-between">
+      <a href="index.html">
+        <div class="flex items-center">
+          <h1 class="text-2xl font-['Pacifico'] text-primary">Брюнетка</h1>
+        </div>
+      </a>
+      <nav class="hidden md:flex items-center space-x-8">
+        <a href="#about" class="text-primary hover:text-primary/80 transition-colors"
+          >О нас</a
+        >
+        <a href="#services" class="text-primary hover:text-primary/80 transition-colors"
+          >Услуги</a
+        >
+        <a href="#offers" class="text-primary hover:text-primary/80 transition-colors"
+          >Акции</a
+        >
+      </nav>
+      <div class="md:hidden w-6 h-6 flex items-center justify-center">
+        <i class="ri-menu-line text-primary ri-lg"></i>
+      </div>
+    </header>
+    <!-- Hero Section -->
+    <section
+      class="w-full hero-bg"
+      style="background-image: url('images\IMG_0969 1.jpg')"
+    >
+      <div
+        class="container mx-auto px-8 md:px-16 py-16 flex flex-col md:flex-row items-center"
+      >
+        <div class="w-full md:w-1/2 mb-12 md:mb-0">
+          <h2 class="text-4xl md:text-5xl font-light text-primary mb-6">
+            Брюнетка
+          </h2>
+          <p class="text-lg text-gray-700 mb-8">
+            Пространство красоты, любви и заботы. Специальные предложения для
+            наших клиентов каждый месяц.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a href="service1.html">
+              <div class="w-40 h-40 relative group overflow-hidden rounded">
+                <img
+                  src="images\фон.jpg"
+                  alt="Стрижки"
+                  class="w-full h-full object-cover object-top transition-transform duration-300 group-hover:scale-105"
+                />
+                <div
+                  class="absolute bottom-0 left-0 right-0 bg-black/30 p-3 flex justify-between items-center"
+                >
+                  <span class="text-white">Стрижки</span>
+                  <div
+                    class="w-6 h-6 flex items-center justify-center text-white"
+                  >
+                    <i class="ri-arrow-right-line"></i>
+                  </div>
+                </div>
+            </a>
+            <a href="service2.html">
+              <div class="w-40 h-40 relative group overflow-hidden rounded">
+                <div
+                  class="w-6 h-6 flex items-center justify-center text-white"
+                >
+                  <i class="ri-arrow-right-line"></i>
+                </div>
+              </div>
+            </div>
+            <div class="w-40 h-40 relative group overflow-hidden rounded">
+              <img
+                src="images\фон_1.jpg"
+                alt="Окрашивание"
+                class="w-full h-full object-cover object-top transition-transform duration-300 group-hover:scale-105"
+              />
+              <div
+                class="absolute bottom-0 left-0 right-0 bg-black/30 p-3 flex justify-between items-center"
+              >
+                <span class="text-white">Окрашивание</span>
+                <div
+                  class="w-6 h-6 flex items-center justify-center text-white"
+                >
+                  <i class="ri-arrow-right-line"></i>
+                </div>
+              </div>
+            </a>
+            
+            </div>
+          </div>
+        </div>
+        <div class="w-full md:w-1/2 flex justify-center md:justify-end">
+          <div class="relative max-w-md">
+            <img
+              src="images\IMG_0969 1.jpg"
+              alt="Модель"
+              class="w-full h-auto rounded"
+            />
+            <a href="appointment.html">
+              <button
+              class="absolute bottom-4 right-4 bg-white text-primary py-2 px-6 !rounded-button whitespace-nowrap hover:bg-gray-100 transition-colors"
+            >
+              Записаться
+            </button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Why Choose Us Section -->
+    <section class="py-16 px-8 md:px-16 bg-gray-50" id="about">
+      <div class="container mx-auto">
+        <h2 class="text-3xl font-light text-primary mb-12">
+          Почему выбирают нас?
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div
+            class="bg-white p-8 rounded shadow-sm hover:shadow-md transition-shadow"
+          >
+            <h3 class="text-xl font-medium text-primary mb-4">
+              Опытные специалисты
+            </h3>
+            <p class="text-gray-600 mb-4">
+              В нашей команде работают мастера с многолетним опытом, которые
+              регулярно повышают свою квалификацию и применяют современные
+              техники.
+            </p>
+            <div class="w-12 h-1 bg-primary/20"></div>
+          </div>
+          <div
+            class="bg-white p-8 rounded shadow-sm hover:shadow-md transition-shadow"
+          >
+            <h3 class="text-xl font-medium text-primary mb-4">
+              Премиальные средства
+            </h3>
+            <p class="text-gray-600 mb-4">
+              В своей работе мы используем только проверенные средства ведущих
+              брендов: TONI&GUY, Wella Professional, Olaplex и другие.
+            </p>
+            <div class="w-12 h-1 bg-primary/20"></div>
+          </div>
+          <div
+            class="bg-white p-8 rounded shadow-sm hover:shadow-md transition-shadow"
+          >
+            <h3 class="text-xl font-medium text-primary mb-4">
+              Специальные предложения
+            </h3>
+            <p class="text-gray-600 mb-4">
+              Каждый месяц мы обновляем специальные предложения для наших
+              постоянных и новых клиентов, чтобы вы могли получить больше.
+            </p>
+            <div class="w-12 h-1 bg-primary/20"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Services Section -->
+    <section class="py-16 px-8 md:px-16" id="services">
+      <div class="container mx-auto">
+        <h2 class="text-3xl font-light text-primary mb-12">Услуги</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Service 1 -->
+          <a
+            href="service1.html"
+            class="service-card group block relative overflow-hidden rounded"
+          >
+            <img
+              src="images\IMG_5883.JPG"
+              alt="Стрижка"
+              class="w-full h-64 object-cover object-top transition-transform duration-300 group-hover:scale-105"
+            />
+            <div
+              class="absolute bottom-0 left-0 right-0 bg-black/30 p-4 flex justify-between items-center"
+            >
+              <span class="text-white text-lg">Стрижка</span>
+              <div class="w-8 h-8 flex items-center justify-center text-white">
+                <i class="ri-arrow-right-line arrow-icon"></i>
+              </div>
+            </div>
+          </a>
+          <!-- Service 2 -->
+          <a
+            href="service2.html"
+            class="service-card group block relative overflow-hidden rounded"
+          >
+            <img
+              src="images\IMG_5884.JPG"
+              alt="Окрашивание волос"
+              class="w-full h-64 object-cover object-top transition-transform duration-300 group-hover:scale-105"
+            />
+            <div
+              class="absolute bottom-0 left-0 right-0 bg-black/30 p-4 flex justify-between items-center"
+            >
+              <span class="text-white text-lg">Окрашивание волос</span>
+              <div class="w-8 h-8 flex items-center justify-center text-white">
+                <i class="ri-arrow-right-line arrow-icon"></i>
+              </div>
+            </div>
+          </a>
+          <!-- Service 3 -->
+          <a
+            href="service3.html"
+            class="service-card group block relative overflow-hidden rounded"
+          >
+            <img
+              src="images\IMG_5880.JPG"
+              alt="Кератиновое выпрямление"
+              class="w-full h-64 object-cover object-top transition-transform duration-300 group-hover:scale-105"
+            />
+            <div
+              class="absolute bottom-0 left-0 right-0 bg-black/30 p-4 flex justify-between items-center"
+            >
+              <span class="text-white text-lg">Кератиновое выпрямление</span>
+              <div class="w-8 h-8 flex items-center justify-center text-white">
+                <i class="ri-arrow-right-line arrow-icon"></i>
+              </div>
+            </div>
+          </a>
+          <!-- Service 4 -->
+          <a
+            href="service4.html"
+            class="service-card group block relative overflow-hidden rounded"
+          >
+            <img
+              src="images\IMG_5882.JPG"
+              alt="Укладка"
+              class="w-full h-64 object-cover object-top transition-transform duration-300 group-hover:scale-105"
+            />
+            <div
+              class="absolute bottom-0 left-0 right-0 bg-black/30 p-4 flex justify-between items-center"
+            >
+              <span class="text-white text-lg">Укладка</span>
+              <div class="w-8 h-8 flex items-center justify-center text-white">
+                <i class="ri-arrow-right-line arrow-icon"></i>
+              </div>
+            </div>
+          </a>
+          <!-- Service 5 -->
+          <a
+            href="service5.html"
+            class="service-card group block relative overflow-hidden rounded"
+          >
+            <img
+              src="images\IMG_5881.JPG"
+              alt="БиО-завивка"
+              class="w-full h-64 object-cover object-top transition-transform duration-300 group-hover:scale-105"
+            />
+            <div
+              class="absolute bottom-0 left-0 right-0 bg-black/30 p-4 flex justify-between items-center"
+            >
+              <span class="text-white text-lg">БИО-завивка</span>
+              <div class="w-8 h-8 flex items-center justify-center text-white">
+                <i class="ri-arrow-right-line arrow-icon"></i>
+              </div>
+            </div>
+          </a>
+          <!-- Service 6 -->
+          <a
+            href="service6.html"
+            class="service-card group block relative overflow-hidden rounded"
+          >
+            <img
+              src="images\IMG_5885.JPG"
+              alt="Брови"
+              class="w-full h-64 object-cover object-top transition-transform duration-300 group-hover:scale-105"
+            />
+            <div
+              class="absolute bottom-0 left-0 right-0 bg-black/30 p-4 flex justify-between items-center"
+            >
+              <span class="text-white text-lg">Брови&Ресницы</span>
+              <div class="w-8 h-8 flex items-center justify-center text-white">
+                <i class="ri-arrow-right-line arrow-icon"></i>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- Special Offers Section -->
+    <section class="py-16 px-8 md:px-16 bg-gray-50" id="offers">
+      <div class="container mx-auto">
+        <h2 class="text-3xl font-light text-primary mb-12">
+          Специальные предложения
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- Offer 1 -->
+          <div class="relative overflow-hidden rounded group">
+            <img
+              src="images\Rectangle 12.jpg"
+              alt="Organic brows"
+              class="w-full h-64 object-cover object-top transition-transform duration-300 group-hover:scale-105"
+            />
+            <div
+              class="absolute inset-0 bg-black/40 flex flex-col justify-end p-8"
+            >
+              <h3 class="text-white text-2xl mb-2">Organic brows</h3>
+              <p class="text-white/90 mb-4">
+                Для любителей долговременной укладки
+                Для перещипанных и тонких бровей
+                Для густых и жестких бровей
+              </p>
+              <div class="flex items-center justify-between">
+                <span class="text-white font-semibold">10% скидка</span>
+                
+                <a href="appointment.html">
+                  <button
+                  class="bg-white text-primary py-2 px-6 !rounded-button whitespace-nowrap hover:bg-gray-100 transition-colors"
+                >
+                  Записаться
+                </button>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Offer 2 -->
+          <div class="relative overflow-hidden rounded group">
+            <img
+              src="images\Rectangle 13.jpg"
+              alt="Заботливый уход"
+              class="w-full h-64 object-cover object-top transition-transform duration-300 group-hover:scale-105"
+            />
+            <div
+              class="absolute inset-0 bg-black/40 flex flex-col justify-end p-8"
+            >
+              <h3 class="text-white text-2xl mb-2">Заботливый уход</h3>
+              <p class="text-white/90 mb-4">
+                Для записи на сложное окрашивание.
+                Окрашивание + стрижка
+              </p>
+              <div class="flex items-center justify-between">
+                <span class="text-white font-semibold">10% скидка</span>
+                <a href="appointment.html">
+                  <button
+                  class="bg-white text-primary py-2 px-6 !rounded-button whitespace-nowrap hover:bg-gray-100 transition-colors"
+                >
+                  Записаться
+                </button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-black text-white relative">
+      <div class="container mx-auto px-8 py-8">
+        <div class="flex flex-col">
+          <a href="index.html">
+            <h3 class="text-2xl font-['Pacifico'] mb-6">Брюнетка</h3>
+          </a>
+          <div class="flex flex-col space-y-2 mb-6">
+            <a href="#about" class="text-gray-300 hover:text-white transition-colors"
+              >О нас</a
+            >
+            <a href="#services" class="text-gray-300 hover:text-white transition-colors"
+              >Услуги</a
+            >
+            <a href="#offers" class="text-gray-300 hover:text-white transition-colors"
+              >Акции</a
+            >
+          </div>
+          <div class="flex flex-col space-y-2 mb-6">
+            <p class="text-gray-300">Пн-Пт: 08:00-23:00</p>
+            <p class="text-gray-300">Сб-Вс: 09:00-17:00</p>
+            <p class="text-gray-300">г. Вологда, ул. Ленина 25</p>
+          </div>
+          <div class="flex space-x-4">
+            <a
+              href="https://vk.com/brunetka1010"
+              target="_blank"
+              class="text-white hover:text-gray-300 transition-colors"
+            >
+              <div class="w-8 h-8 flex items-center justify-center">
+                <i class="ri-vk-fill ri-lg"></i>
+              </div>
+            </a>
+            <a
+              href="https://www.instagram.com/brunetka.vologda?igsh=MXR5YjQ2MzFnNjZjMw=="
+              target="_blank"
+              class="text-white hover:text-gray-300 transition-colors"
+            >
+              <div class="w-8 h-8 flex items-center justify-center">
+                <i class="ri-instagram-fill ri-lg"></i>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="absolute right-0 bottom-0">
+          <img
+            src="images\Rectangle 16_6.jpg"
+            alt="Footer image"
+            class="h-[300px] object-cover object-top"
+          />
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
