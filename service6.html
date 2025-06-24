@@ -25,6 +25,15 @@
           },
         },
       };
+
+      document.addEventListener("DOMContentLoaded", function () {
+    const menuButton = document.querySelector("#burger-menu");
+    const mobileNav = document.querySelector("#mobile-nav");
+
+    menuButton.addEventListener("click", () => {
+      mobileNav.classList.toggle("hidden");
+    });
+  });
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -43,33 +52,34 @@
   </head>
 
 <body class="min-h-screen flex flex-col">
-    <!-- Header -->
-    <header class="bg-primary text-white py-4">
-        <div class="container mx-auto px-4 flex justify-between items-center">
-            <a href="index.html" class="text-xl font-bold">Брюнетка</a>
-            <nav class="hidden md:flex space-x-8">
-                <a href="index.html#about" class="hover:text-gray-300 transition-colors">О нас</a>
-                <a href="index.html#services" class="hover:text-gray-300 transition-colors">Услуги</a>
-                <a href="index.html#offers" class="hover:text-gray-300 transition-colors">Акции</a>
-            </nav>
-            <div class="md:hidden w-8 h-8 flex items-center justify-center">
-                <i class="ri-menu-line ri-lg"></i>
-            </div>
-        </div>
-    </header>
+    <header class="bg-black text-white py-4">
+  <div class="container mx-auto px-4 flex justify-between items-center">
+    <a href="index.html" class="text-xl font-light">Брюнетка</a>
+    <nav class="hidden md:flex space-x-8">
+      <a href="index.html#about" class="hover:text-gray-300 transition-colors">О нас</a>
+      <a href="index.html#services" class="hover:text-gray-300 transition-colors">Услуги</a>
+      <a href="index.html#offers" class="hover:text-gray-300 transition-colors">Акции</a>
+    </nav>
+    <div class="md:hidden w-6 h-6 flex items-center justify-center" id="burger-menu">
+      <i class="ri-menu-line text-white ri-lg cursor-pointer"></i>
+    </div>
+  </div>
+</header>
 
-    <!-- Main Content -->
+<nav id="mobile-nav" class="md:hidden hidden px-8 py-4 bg-white shadow-md space-y-2">
+  <a href="index.html#about" class="block text-primary hover:text-primary/80 transition-colors">О нас</a>
+  <a href="index.html#services" class="block text-primary hover:text-primary/80 transition-colors">Услуги</a>
+  <a href="index.html#offers" class="block text-primary hover:text-primary/80 transition-colors">Акции</a>
+</nav>
+
     <main class="flex-grow">
         <div class="container mx-auto px-4 py-8">
-            <!-- Back Button -->
             <a href="index.html" class="inline-flex items-center border border-gray-300 px-4 py-2 mb-8 hover:bg-gray-100 transition-colors">
                 <i class="ri-arrow-left-s-line ri-lg mr-2"></i>
                 <span>В начало</span>
             </a>
 
-            <!-- Haircut Service Section -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-6">
-                <!-- Left Column - Images -->
                 <div class="space-y-4 relative">
                     <div class="haircut-image overflow-hidden">
                         <img src="images\photo_2025-05-13_14-57-28.jpg">
@@ -77,7 +87,6 @@
                     
                 </div>
 
-                <!-- Right Column - Service Info -->
                 <div class="flex flex-col justify-center">
                     <h1 class="text-3xl font-bold mb-6">Окраска и оформление бровей и ресниц</h1>
                     
@@ -115,18 +124,16 @@
                 </div>
             </div>
 
-            <!-- Divider -->
             <div class="border-t border-gray-200 my-16"></div>
 
             
         </div>
     </main>
-    <!-- Footer -->
     <footer class="bg-black text-white relative">
         <div class="container mx-auto px-8 py-8">
           <div class="flex flex-col">
             <a href="index.html">
-                <h3 class="text-2xl font-['Pacifico'] mb-6">Брюнетка</h3>
+                <h3 class="text-2xl font-light mb-6">Брюнетка</h3>
             </a>
             <div class="flex flex-col space-y-2 mb-6">
               <a href="index.html#about" class="text-gray-300 hover:text-white transition-colors"
@@ -142,7 +149,7 @@
             <div class="flex flex-col space-y-2 mb-6">
               <p class="text-gray-300">Пн-Пт: 08:00-23:00</p>
               <p class="text-gray-300">Сб-Вс: 09:00-17:00</p>
-              <p class="text-gray-300">г. Вологда, ул. Ленина 25</p>
+              <p class="text-gray-300">г. Вологда, ул. Петина 25</p>
             </div>
             <div class="flex space-x-4">
               <a
@@ -165,20 +172,16 @@
               </a>
             </div>
           </div>
-          <div class="absolute right-0 bottom-0">
-            <img
-              src="images\Rectangle 16_6.jpg"
-              alt="Footer image"
-              class="h-[300px] object-cover object-top"
-            />
-          </div>
+          <div class="absolute right-0 bottom-0 hidden md:block">
+  <img
+    src="images/Rectangle 16_6-Photoroom.png"
+    alt="Footer image"
+    class="h-[300px] object-cover object-top"
+  />
+</div>
         </div>
       </footer>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Mobile menu toggle functionality could be added here
-        });
-    </script>
+
 </body>
 </html>
